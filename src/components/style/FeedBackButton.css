@@ -1,0 +1,32 @@
+.feedBackButton{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    background-color: #FFFFFF;
+    padding: 10px;
+    border-radius: 6.5px;
+    /* margin: 55px; */
+    margin-top: 15px;
+    margin-bottom: 55px;
+    margin-right: 55px;
+    margin-left:55px;
+    height: 120px;
+    width: 238px;
+    border: 1px solid #FFFFFF;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+button {
+    align-items: center;
+    text-align: center;
+    background-color: rgb(155,243,204);
+    font-size: medium;
+    font-weight:bold;
+    margin: 12px;
+    width: 190px;
+    height: 110px;
+    border: none;
+    border-radius: 6.5px;
+}

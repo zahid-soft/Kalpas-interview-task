@@ -1,0 +1,42 @@
+.UserReader{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: black;
+    background-color: #FFFFFF;
+    padding: 10px;
+    border-radius: 6.5px;
+    margin-top: 55px;
+    margin-bottom: 25px;
+    margin-right: 55px;
+    margin-left:55px;
+    height: 69px;
+    width: 238px;
+    border: 1px solid #FFFFFF;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.UserReader__image{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    font-size: 1.25rem;
+    align-items: center;
+    flex-shrink: 0;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    line-height: 1;
+    user-select: none;
+    border-radius: 50%;
+    justify-content: center;
+}
+
+.UserReader__info{
+    flex: 1;
+    padding: 10px;
+}
+
+.UserReader__info> h3 {
+    color: black;
+}
