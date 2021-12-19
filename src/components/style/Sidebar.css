@@ -23,5 +23,5 @@
 }
 .sidebar__form{
     display: flex;
-   
+    flex: 0.25;
 }
