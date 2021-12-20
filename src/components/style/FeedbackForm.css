@@ -2,6 +2,7 @@
     margin-top: 55px;
     margin-left: 70px;
     padding-left: 10px;
+    
 }
 .feedbackForm__title{
     margin-bottom: 35px;
@@ -95,4 +96,24 @@
     border-radius: 6.5px;
     cursor: pointer;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+
+
+.feedbackForm__suggestion{
+    z-index: 1;
+    justify-content: center;
+    padding-left: 20px;
+    z-index: 99;
+    padding-top: 5px;
+    cursor: pointer;
+    font-size: small;
+    background: #ffff;
+    border:none ;
+    border-radius: 6.5px;
+}
+
+.feedbackForm__suggestion p{
+    padding-top:5px ;
+    
 }
