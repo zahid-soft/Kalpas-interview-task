@@ -26,7 +26,24 @@ const UserData = ({verticaldata}) => {
 
   return (
     <div className="userdata">
-    { verticaldata ? <div>
+    { verticaldata ? 
+      <div>
+      {userData.map((item, i) => (
+        <div className="userdata__contain_horizontal">
+          <div className="userdata__list_horizontal">
+            <HorizontalData title={item.title} body={item.body} />
+          </div>
+          <div className="userdata_button_">
+            <AiIcons.AiOutlineClose
+              size="1.8em"
+              color="rgb(251,142,143)"
+              onClick={() => delteUser(item.id)}
+            />
+          </div>
+        </div>
+      ))}
+      </div> :
+      <div>
       {userData.map((item, i) => (
         <div className="userdata__contain">
           <div className="userdata__list">
@@ -41,7 +58,10 @@ const UserData = ({verticaldata}) => {
           </div>
         </div>
       ))}
-      </div> : <HorizontalData /> }
+
+     
+      </div>
+      }
     </div>
   );
 };

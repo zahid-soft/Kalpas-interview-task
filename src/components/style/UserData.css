@@ -1,10 +1,15 @@
 .userdata{
+
     margin-top: 55px;
     margin-left:65px;
+    position: static;
+    
+    
 }
 .userdata__contain{
     display: flex;
     justify-content: center;
+    
 }
 
 .userdata__list{
@@ -37,12 +42,12 @@
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 }
 
-.pagination{
+.userdata__contain_horizontal{
+    
     display: flex;
-    justify-content: center;
-    margin-top: 15px;
-}
-
-.pagination:nth-child(1){
-    padding: 10px;
+    background: #ffff;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    width: 300px;
+    margin-bottom: 20px;
+    font-family: arial;
 }

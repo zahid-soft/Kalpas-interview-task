@@ -1,11 +1,14 @@
 import React from 'react'
 
-const HorizontalData = () => {
+const HorizontalData = ({title,body}) => {
     return (
-        <div className='horizontal'>
-        <p>Hii bhaiya</p>
+        <>
+             <h3 style={{padding:"10px"}}>{title}</h3>
+            <p style={{padding:"10px"}}>{body}</p>
+        </>
+           
+        
             
-        </div>
     )
 }
 

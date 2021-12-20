@@ -57,7 +57,7 @@ const Form = () => {
 
   return (
     <div className="feedbackForm__form">
-      <form method="POST">
+      <form >
         <p>
           <label className="feedbackForm__label">First Name:</label>
         </p>

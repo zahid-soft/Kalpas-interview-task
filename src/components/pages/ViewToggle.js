@@ -8,11 +8,11 @@ const ViewToggle = ({vertical,horizontal}) => {
         <div className="viewToggle">
         <h2>View Toggle</h2>
         <div className="button">
-        <div className='horizontal' >
-        <span  ><MdIcons.MdOutlineArticle size="2.5em" color='rgb(156,156,156)' onClick={horizontal}/></span>
+        <div className='horizontal' onClick={horizontal} >
+        <span  ><MdIcons.MdOutlineArticle size="2.5em" color='rgb(156,156,156)' /></span>
         </div>
-       <div className='vertical' style={{background:"rgb(154,241,202)"}} >
-       <span><AiIcons.AiOutlineUnorderedList size="2.5em" color='rgb(156,156,156)'  onClick={vertical}/> </span>
+       <div className='vertical'  onClick={vertical} style={{background:"rgb(154,241,202)"}} >
+       <span><AiIcons.AiOutlineUnorderedList size="2.5em" /> </span>
        </div>
         </div>
         
