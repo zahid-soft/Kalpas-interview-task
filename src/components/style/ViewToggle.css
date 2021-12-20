@@ -35,10 +35,31 @@
 
 }
 
-.button span{
+.horizontal{
+    display: flex;
+    justify-content: center;
+    margin-left: 0px;
+    background: transparent;
+    width: 100%;
+    align-items: center;   
+    border-radius: 6.5px;
+}
+
+.vertical{
+    display: flex;
+    justify-content: center;
+    margin-right: 0px;
+    background: transparent;
+    width: 100%;
+    align-items: center; 
+    border-radius: 6.5px;
+
+}
+
+/* .button span{
     padding: 5px;
     margin-top: 0px;
     margin-bottom: 0;
     margin-left: 2px;
     margin-right: 2px;
-}
+} */

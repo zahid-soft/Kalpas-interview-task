@@ -3,10 +3,20 @@ import axios from "axios";
 import * as AiIcons from "react-icons/ai";
 
 const Form = () => {
-
   const [countries, setCountries] = useState([]);
   const [text, setText] = useState("");
   const [suggestion, setSuggestions] = useState([]);
+
+  const[formData,setFormData] = useState({
+    firstName: '',
+    lastName: '',
+    address: '',
+    email: '',
+    phone: '',
+  });
+
+
+
 
   useEffect(() => {
     const loadCountries = async () => {
@@ -18,10 +28,9 @@ const Form = () => {
 
   const searchCountries = (text) => {
     let matches = [];
-    if (text.length<=0){
+    if (text.length <= 0) {
       setSuggestions([]);
-      setText('')
-     
+      setText("");
     } else {
       matches = countries.filter((country) => {
         const regex = new RegExp(`${text}`, "gi");
@@ -29,7 +38,6 @@ const Form = () => {
       });
       setText(text);
       setSuggestions(matches);
-      
     }
   };
 
@@ -38,18 +46,29 @@ const Form = () => {
     setSuggestions([]);
   };
 
+  let name,value;
+  const postUserData = (event) => {
+    name = event.target.name;
+    value = event.target.value
+
+    setFormData({...formData, [name]:value})
+    console.log(formData)
+  }
+
   return (
     <div className="feedbackForm__form">
-      <form>
+      <form method="POST">
         <p>
           <label className="feedbackForm__label">First Name:</label>
         </p>
         <p>
           <input
             type="text"
-            name="first name"
+            name="firstName"
             className="feedbackForm__input"
             placeholder="john"
+            value={formData.firstName}
+            onChange={postUserData}
           />
         </p>
         <p>
@@ -58,9 +77,11 @@ const Form = () => {
         <p>
           <input
             type="text"
-            name="last name"
+            name="lastName"
             className="feedbackForm__input"
             placeholder="Doe"
+            value={formData.lastName}
+            onChange={postUserData}
           />
         </p>
 
@@ -73,6 +94,8 @@ const Form = () => {
             name="address"
             className="feedbackForm__textarea"
             placeholder="Enter your full postal Address"
+            value={formData.address}
+            onChange={postUserData}
           />
         </p>
 
@@ -95,15 +118,13 @@ const Form = () => {
 
         {suggestion &&
           suggestion.map((item, index) => (
-          
-              <div
+            <div
               key={index}
-                className="feedbackForm__suggestion"
-                onClick={() => onSuggestHandler(item.name)}
-              >
+              className="feedbackForm__suggestion"
+              onClick={() => onSuggestHandler(item.name)}
+            >
               <p> {item.name}</p>
-               
-              </div>
+            </div>
           ))}
 
         <p>
@@ -115,6 +136,8 @@ const Form = () => {
             name="email"
             className="feedbackForm__input"
             placeholder="example@gmail.com"
+            value={formData.email}
+            onChange={postUserData}
           />
         </p>
 
@@ -124,9 +147,11 @@ const Form = () => {
         <p>
           <input
             type="tel"
-            name="phone number"
+            name="phone"
             className="feedbackForm__input"
             placeholder="123456"
+            value={formData.phone}
+            onChange={postUserData}
           />
         </p>
 
