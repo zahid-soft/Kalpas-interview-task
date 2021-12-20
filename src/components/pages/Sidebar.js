@@ -5,7 +5,7 @@ import ViewToggle from "./ViewToggle";
 import FeedBackButton from "./FeedBackButton";
 import FeedbackForm from "./FeedbackForm";
 
-const Sidebar = () => {
+const Sidebar = ({vertical,horizontal}) => {
   const [feedback, setfeedback] = useState(true);
 
   const handleFrom = () => {
@@ -19,7 +19,7 @@ const Sidebar = () => {
           <UserReader />
           {feedback ? (
             <div>
-              <ViewToggle />
+              <ViewToggle vertical={vertical} horizontal={horizontal} />
               <FeedBackButton feedback={handleFrom} bg={"rgb(155,243,204)"} />
             </div>
           ) : (

@@ -3,9 +3,10 @@ import React, { useState, useEffect } from "react";
 import * as AiIcons from "react-icons/ai";
 import ReactPaginate from "react-paginate";
 import "../style/UserData.css";
+import HorizontalData from "./HorizontalData";
 import VerticalData from "./VerticalData";
 
-const UserData = () => {
+const UserData = ({verticaldata}) => {
   const [userData, setUserData] = useState([]);
 
   useEffect(() => {
@@ -25,6 +26,7 @@ const UserData = () => {
 
   return (
     <div className="userdata">
+    { verticaldata ? <div>
       {userData.map((item, i) => (
         <div className="userdata__contain">
           <div className="userdata__list">
@@ -39,6 +41,7 @@ const UserData = () => {
           </div>
         </div>
       ))}
+      </div> : <HorizontalData /> }
     </div>
   );
 };
